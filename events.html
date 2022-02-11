@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("#a").click(function(){
+                     $(this).hide();
+                });
+              $("#b").dblclick(function(){
+                    $(this).slideToggle("slow");
+              });  
+              $("#c").click(function(){
+                    $(this).slideToggle("slow");
+              });  
+              $("#b").mouseenter(function(){
+                    $(this).css("color","red");
+              });
+              $("#b").mouseleave(function(){
+                    $(this).css("color","green");
+              });
+              $("#c").mouseup(function(){
+                    $(this).css("background-color","green");
+              });
+              $("#c").mousedown(function(){
+                    $(this).css("background-color","blue");
+              });
+              $("input").focus(function(){
+                  $(this).css("background-color","blue");
+              });
+              $("input").blur(function(){
+                    $(this).css("background-color","red");
+              });
+            });
+        </script>
+        <style>
+            #c{
+                padding: 50px;
+                width: 800px;
+                height: 400px;
+                background-color: aqua;
+                overflow: auto;    
+            }
+        </style>
+    </head>
+    <body>
+        <h1> my events </h1>
+        <p id="a"> this is my events.</p>
+        <p id="b"> j query is a large programming language.</p>
+        <div id="c">  
+            $(document).ready()  <br>
+
+            The $(document).ready() method allows us to execute a function when the document is fully loaded. This event is already explained in the jQuery Syntax chapter.<br>
+            
+            click()<br>
+            
+            The click() method attaches an event handler function to an HTML element.
+            
+            The function is executed when the user clicks on the HTML element.
+            
+            The following example says: When a click event fires on a <p> element; hide the current <p> elem
+        </div>
+        name:<input id="d"><br>
+        mail:<input id="e">
+    </body>
+</html>
